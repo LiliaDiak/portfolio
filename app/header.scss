@@ -1,0 +1,29 @@
+.header {
+    background-color: #BF8709;
+    padding: 4px;
+    &__wrapper {
+      display: flex;
+      justify-content: space-between;
+      margin: 5px 100px;
+      align-items: center;
+    }
+  
+    &__name {
+      font-family: 'Montez', cursive;
+      font-size: 34px;
+      font-weight: 600;
+  
+    }
+  
+    &__links {
+      font-family: 'Epilogue', sans-serif;
+      font-size: 20px;
+      font-weight: 500;
+    }
+  
+    &__link {
+      margin-left: 40px;
+      width: 300px;
+    }
+  }
+  

@@ -1,0 +1,46 @@
+*,
+*:after,
+*::before {
+  padding: 0 0;
+  margin: 0 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: #3d2a41;
+  background-color: #EAC57D;
+  font-family: 'Epilogue', sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: #3d2a41;
+  cursor: pointer;
+}
+
+a:hover {
+  transform: all .05s;
+  color: #64436a;
+}
+
+.container {
+  margin: 10px 140px;
+}
+
+.title {
+  position: relative;
+  margin-bottom: 20px;
+  color: #3d2a41;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 58px;
+    height: 2.5px;
+    top: 10px;
+    left: 135px;
+    bottom: 1px;
+    right: 1px;
+    background-color: #807490;
+  }
+}

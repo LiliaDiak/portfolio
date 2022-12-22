@@ -1,0 +1,23 @@
+.about {
+    &__wrapper {
+        display: flex;
+        gap: 150px;
+        margin-top: 100px;
+        align-items: center;
+        background-image: url(../images/back.svg);
+        background-repeat: no-repeat;
+        background-position: -44px;
+    }
+
+    &__text {
+        line-height: 25px;
+        max-width: 450px;
+    }
+
+    &__image-photo {
+        border-radius: 50%;
+        max-width: 490px;
+        max-height: 630px;
+
+    }
+}
