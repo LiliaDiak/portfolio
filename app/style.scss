@@ -2,3 +2,159 @@
 @import "header";
 @import "about";
 @import "skills";
+
+
+.skills{
+    margin-top: 50px;
+    &__title{
+        margin-bottom: 300x;
+    }
+    &__images{
+        display: flex;
+        justify-content: center;
+        gap:80px;
+        margin-top: 60px;
+    }
+    &__image{
+        cursor: pointer;
+        &:hover path{
+            transition: all 0.4s;
+            fill: #807490;
+        }
+    }
+    &__soft{
+        margin: 50px 0 10px 30px;
+    }
+    &__soft-text{
+        margin-bottom: 25px;
+        font-size: 20px;
+        font-weight: 500;
+    }
+    &__list{
+        margin-left: 20px;
+    }
+    &__li{
+        line-height: 15px;
+        margin-bottom: 10px;
+    }
+}
+
+
+
+
+
+
+
+
+
+.works{
+    margin-top: 50px;
+    &__slider-img{
+        width:1000px;
+        height: 550px;
+    }
+}
+.slider{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    margin-left: 220px;
+}
+
+.slick-prev{
+    position: absolute;
+    background-color: #B9BBDE;
+    width: 83px;
+    height: 550px;
+    opacity: 0.76;
+    left: 1004px;
+    border: none;
+    cursor: pointer;
+    &:hover{
+        transition: all .5s;
+        background-color: #807490;
+        opacity: 0.82;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.footer{
+    background-color: #BF8709;
+    opacity: 0.9;
+    display: flex;
+    &__wrapper{
+        display: flex;
+        margin: 20px 0;
+        gap: 250px;
+    }
+    &__title{
+        margin-bottom: 25px;
+    }
+    &__text{
+        max-width: 1000px;
+        line-height: 25px;
+    }
+    &__list{
+        list-style: none;
+        position: relative;
+    }
+    &__link{
+        line-height: 25px;
+        margin-top: 15px;
+    }
+    &__telegram::after{
+        content: url(../images/site-icons/telegram.svg);
+        position: absolute;
+        left: -34px;
+        top: 12px;
+    }
+    &__instagram::after{
+        content: url(../images/site-icons/instagram.svg);
+        position: absolute;
+        left: -33px;
+    }
+    &__github::after{
+        content: url(../images/site-icons/github.svg);
+        position: absolute;
+        left: -36px;
+        top: 118px;
+    }
+    &__email::after{
+        content: url(../images/site-icons/email.svg);
+        position: absolute;
+        left: -33px;
+        top: 84px;
+    }
+    &__caption{
+        display: flex;
+        align-items: flex-end;
+        font-family: 'Montez', cursive;
+        margin-left: 300px;
+        font-size: 20px;
+        width:250px;
+    }
+
+}

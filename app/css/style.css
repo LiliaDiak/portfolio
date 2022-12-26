@@ -24,12 +24,12 @@ a:hover {
 }
 
 .container {
-  margin: 10px 140px;
+  margin: 10px 200px;
 }
 
 .title {
   position: relative;
-  margin-bottom: 20px;
+  margin-bottom: 50px;
   color: #3d2a41;
 }
 .title::after {
@@ -47,6 +47,10 @@ a:hover {
 .header {
   background-color: #BF8709;
   padding: 4px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 10;
 }
 .header__wrapper {
   display: flex;
@@ -86,4 +90,127 @@ a:hover {
   border-radius: 50%;
   max-width: 490px;
   max-height: 630px;
+}
+
+.skills {
+  margin-top: 50px;
+}
+.skills__title {
+  margin-bottom: 300x;
+}
+.skills__images {
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+  margin-top: 60px;
+}
+.skills__image {
+  cursor: pointer;
+}
+.skills__image:hover path {
+  transition: all 0.4s;
+  fill: #807490;
+}
+.skills__soft {
+  margin: 50px 0 10px 30px;
+}
+.skills__soft-text {
+  margin-bottom: 25px;
+  font-size: 20px;
+  font-weight: 500;
+}
+.skills__list {
+  margin-left: 20px;
+}
+.skills__li {
+  line-height: 15px;
+  margin-bottom: 10px;
+}
+
+.works {
+  margin-top: 50px;
+}
+.works__slider-img {
+  width: 1000px;
+  height: 550px;
+}
+
+.slider {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  margin-left: 220px;
+}
+
+.slick-prev {
+  position: absolute;
+  background-color: #B9BBDE;
+  width: 83px;
+  height: 550px;
+  opacity: 0.76;
+  left: 1004px;
+  border: none;
+  cursor: pointer;
+}
+.slick-prev:hover {
+  transition: all 0.5s;
+  background-color: #807490;
+  opacity: 0.82;
+}
+
+.footer {
+  background-color: #BF8709;
+  opacity: 0.9;
+  display: flex;
+}
+.footer__wrapper {
+  display: flex;
+  margin: 20px 0;
+  gap: 250px;
+}
+.footer__title {
+  margin-bottom: 25px;
+}
+.footer__text {
+  max-width: 1000px;
+  line-height: 25px;
+}
+.footer__list {
+  list-style: none;
+  position: relative;
+}
+.footer__link {
+  line-height: 25px;
+  margin-top: 15px;
+}
+.footer__telegram::after {
+  content: url(../images/site-icons/telegram.svg);
+  position: absolute;
+  left: -34px;
+  top: 12px;
+}
+.footer__instagram::after {
+  content: url(../images/site-icons/instagram.svg);
+  position: absolute;
+  left: -33px;
+}
+.footer__github::after {
+  content: url(../images/site-icons/github.svg);
+  position: absolute;
+  left: -36px;
+  top: 118px;
+}
+.footer__email::after {
+  content: url(../images/site-icons/email.svg);
+  position: absolute;
+  left: -33px;
+  top: 84px;
+}
+.footer__caption {
+  display: flex;
+  align-items: flex-end;
+  font-family: "Montez", cursive;
+  margin-left: 300px;
+  font-size: 20px;
+  width: 250px;
 }
