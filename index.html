@@ -25,8 +25,8 @@
                 <div class="header__links">
                     <a class="header__link" href="#about">About</a>
                     <a class="header__link" href="#skills">Skills</a>
-                    <a class="header__link" href="#">Contucts</a>
                     <a class="header__link" href="#works">Work</a>
+                    <a class="header__link" href="#contucts">Contucts</a>
                 </div>
             </div>
         </header>
@@ -194,15 +194,26 @@
                 <div class="works__wrapper">
                     <h2 class="works__title title">My works</h2>
                     <div class="slider">
-                        <a href="#"><img class="works__slider-img" src="app/images/works/cuba.png" alt="project"></a>
-                        <a href="#"><img class="works__slider-img" src="app/images/works/fanatic.png" alt="project"></a>
-                        <a href="#"><img class="works__slider-img" src="app/images/works/maivc.png" alt="project"></a>
+                        <div class="works__wrapper-btn">
+                            <a href="#"><img class="works__slider-img" src="app/images/works/cuba.png"
+                                    alt="project"></a>
+                            <a href="#"><img class="works__slider-img" src="app/images/works/fanatic.png"
+                                    alt="project"></a>
+                            <button @click="addClass(); btnHidden()" class="works__btn"
+                                :class="[activeBtn ? 'works__btn-active' : 'works__btn-passive']">show more</button>
+                        </div>
+                        <div class="works__slider-down"
+                            :class="[isActive ? 'works__projects-active' : 'works__projects-passive']">
+                            <a href="#"><img class="works__slider-img" src="app/images/works/maivc.png"
+                                    alt="project"></a>   
+                                </div>
+                                <button @click="removeSlider()" class="works__btn-down" :class="[isActive ? '' : 'works__down-btn']">show less</button>
                     </div>
                 </div>
             </div>
         </section>
 
-        <footer class="footer">
+        <footer class="footer" id="contucts">
             <div class="container">
                 <div class="footer__wrapper">
                     <div class="footer__info">
@@ -216,8 +227,8 @@
                         <li class="footer__link footer__github"><a>github</a></li>
                     </ul>
                     <div class="footer__caption">
-                    <p>Lilia Diakovych 2022</p>
-                </div>
+                        <p>Lilia Diakovych 2022</p>
+                    </div>
                 </div>
             </div>
         </footer>

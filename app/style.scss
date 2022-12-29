@@ -5,9 +5,11 @@
 
 
 .skills{
+    padding-top: 55px;
     margin-top: 50px;
     &__title{
         margin-bottom: 300x;
+        margin-top: 80px;
     }
     &__images{
         display: flex;
@@ -48,34 +50,86 @@
 
 
 .works{
-    margin-top: 50px;
+    margin-top: 85px;
     &__slider-img{
-        width:1000px;
-        height: 550px;
+        border: 15px solid #807490;
+        width:540px;
+        height: 300px;
+        margin-bottom: 15px;
     }
-}
-.slider{
-    display: flex;
-    justify-content: center;
-    position: relative;
-    margin-left: 220px;
-}
+    &__wrapper-btn{
+        display: flex;
+        gap: 20px;
+        align-items: center;
+        position: relative;
+    }
+    &__slider-down{
+        grid-template-columns: 540px 1px;
+        grid-column-gap: 20px;
+    }
+    &__btn{
+        padding:18px 26px;
+        font-size: 17px;
+        white-space: nowrap;
+        margin-bottom: -366px;
+        margin-left: -100px;
+    }
+    &__projects-active{
+        display: grid;
+        transition: all 0.2s linear;
+    }
+    &__projects-passive{
+        opacity: 0;       
+        // display: none;
+        transition: all 0.2s linear;
+    }
+    &__btn-active{
+        // display: none;
+        opacity: 0;       
+        // display: none;
+        transition: all 0.2s linear;
+    }
+    &__btn-down{
+        padding:18px 26px;
+        font-size: 17px;
+        max-width: 150px;
+        margin-left: 1027px;
+        white-space: nowrap;
+        opacity: 1;
+        transition: all 0.2s linear;
+    }
+    &__down-btn{
+        // display: none;
+        opacity: 0;       
+        // display: none;
+        transition: all 0.2s linear;
+    }
 
-.slick-prev{
-    position: absolute;
-    background-color: #B9BBDE;
-    width: 83px;
-    height: 550px;
-    opacity: 0.76;
-    left: 1004px;
-    border: none;
-    cursor: pointer;
-    &:hover{
-        transition: all .5s;
-        background-color: #807490;
-        opacity: 0.82;
-    }
 }
+// .slider{
+//     display: flex;
+//     // justify-content: center;
+//     // position: relative;
+//     // margin-left: 220px;
+//     flex-direction: column;
+// }
+
+// .slick-prev{
+//     margin-top: 30px;
+//     position: absolute;
+//     background-color: #B9BBDE;
+//     width: 83px;
+//     height: 550px;
+//     opacity: 0.76;
+//     left: 1004px;
+//     border: none;
+//     cursor: pointer;
+//     &:hover{
+//         transition: all .5s;
+//         background-color: #807490;
+//         opacity: 0.82;
+//     }
+// }
 
 
 
@@ -102,9 +156,11 @@
 
 
 .footer{
+    transition: all 0.3s;
     background-color: #BF8709;
     opacity: 0.9;
     display: flex;
+    margin-top: 120px;
     &__wrapper{
         display: flex;
         margin: 20px 0;
@@ -152,7 +208,8 @@
         display: flex;
         align-items: flex-end;
         font-family: 'Montez', cursive;
-        margin-left: 300px;
+        margin-left: 100px;
+        white-space: nowrap;
         font-size: 20px;
         width:250px;
     }

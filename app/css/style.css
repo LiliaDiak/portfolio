@@ -10,6 +10,7 @@ body {
   color: #3d2a41;
   background-color: #EAC57D;
   font-family: "Epilogue", sans-serif;
+  scroll-behavior: smooth;
 }
 
 a {
@@ -73,10 +74,12 @@ a:hover {
   width: 300px;
 }
 
+.about {
+  padding-top: 150px;
+}
 .about__wrapper {
   display: flex;
   gap: 150px;
-  margin-top: 100px;
   align-items: center;
   background-image: url(../images/back.svg);
   background-repeat: no-repeat;
@@ -93,10 +96,12 @@ a:hover {
 }
 
 .skills {
+  padding-top: 55px;
   margin-top: 50px;
 }
 .skills__title {
   margin-bottom: 300x;
+  margin-top: 80px;
 }
 .skills__images {
   display: flex;
@@ -128,40 +133,63 @@ a:hover {
 }
 
 .works {
-  margin-top: 50px;
+  margin-top: 85px;
 }
 .works__slider-img {
-  width: 1000px;
-  height: 550px;
+  border: 15px solid #807490;
+  width: 540px;
+  height: 300px;
+  margin-bottom: 15px;
 }
-
-.slider {
+.works__wrapper-btn {
   display: flex;
-  justify-content: center;
+  gap: 20px;
+  align-items: center;
   position: relative;
-  margin-left: 220px;
 }
-
-.slick-prev {
-  position: absolute;
-  background-color: #B9BBDE;
-  width: 83px;
-  height: 550px;
-  opacity: 0.76;
-  left: 1004px;
-  border: none;
-  cursor: pointer;
+.works__slider-down {
+  grid-template-columns: 540px 1px;
+  grid-column-gap: 20px;
 }
-.slick-prev:hover {
-  transition: all 0.5s;
-  background-color: #807490;
-  opacity: 0.82;
+.works__btn {
+  padding: 18px 26px;
+  font-size: 17px;
+  white-space: nowrap;
+  margin-bottom: -366px;
+  margin-left: -100px;
+}
+.works__projects-active {
+  display: grid;
+  transition: all 0.2s linear;
+}
+.works__projects-passive {
+  opacity: 0;
+  transition: all 0.2s linear;
+}
+.works__btn-active {
+  opacity: 0;
+  transition: all 0.2s linear;
+}
+.works__btn-down {
+  padding: 18px 26px;
+  font-size: 17px;
+  max-width: 150px;
+  margin-left: 1027px;
+  white-space: nowrap;
+  opacity: 1;
+  transition: all 0.2s linear;
+}
+.works__down-btn {
+  opacity: 0;
+  transition: all 0.2s linear;
 }
 
 .footer {
+  transition: all 0.3s;
   background-color: #BF8709;
   opacity: 0.9;
   display: flex;
+  margin-top: 120px;
 }
 .footer__wrapper {
   display: flex;
@@ -210,7 +238,8 @@ a:hover {
   display: flex;
   align-items: flex-end;
   font-family: "Montez", cursive;
-  margin-left: 300px;
+  margin-left: 100px;
+  white-space: nowrap;
   font-size: 20px;
   width: 250px;
 }
