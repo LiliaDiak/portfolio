@@ -199,15 +199,18 @@
                                     alt="project"></a>
                             <a href="#"><img class="works__slider-img" src="app/images/works/fanatic.png"
                                     alt="project"></a>
-                            <button @click="addClass(); btnHidden()" class="works__btn"
-                                :class="[activeBtn ? 'works__btn-active' : 'works__btn-passive']">show more</button>
+                            <button data-ripple @click="addClass(); btnHidden()" class="works__btn btn"
+                                :class="[activeBtn ? 'works__btn-active' : 'works__btn-passive']">show more
+                                <span class="ripple"></span>
+                            </button>
                         </div>
                         <div class="works__slider-down"
                             :class="[isActive ? 'works__projects-active' : 'works__projects-passive']">
                             <a href="#"><img class="works__slider-img" src="app/images/works/maivc.png"
-                                    alt="project"></a>   
-                                </div>
-                                <button @click="removeSlider()" class="works__btn-down" :class="[isActive ? '' : 'works__down-btn']">show less</button>
+                                    alt="project"></a>
+                        </div>
+                        <button data-ripple @click="removeSlider()" class="works__btn-down btn"
+                            :class="[isActive ? '' : 'works__down-btn']">show less <span class="ripple"></span></button>
                     </div>
                 </div>
             </div>
@@ -221,10 +224,10 @@
                         <p v-text="footerText" class="footer__text"></p>
                     </div>
                     <ul class="footer__list">
-                        <li class="footer__link footer__telegram"><a>telegram</a></li>
-                        <li class="footer__link footer__instagram"><a>instagram</a></li>
-                        <li class="footer__link footer__email"><a>e-mail</a></li>
-                        <li class="footer__link footer__github"><a>github</a></li>
+                        <li class="footer__link footer__telegram"><a href="https://t.me/lily_diakovych">telegram</a></li>
+                        <li class="footer__link footer__instagram"><a href="https://www.instagram.com/lily_diakovych/">instagram</a></li>
+                        <li class="footer__link footer__email"><a href="lilidiakovychhh@gmail.com">e-mail</a></li>
+                        <li class="footer__link footer__github"><a href="https://github.com/LiliaDiak">github</a></li>
                     </ul>
                     <div class="footer__caption">
                         <p>Lilia Diakovych 2022</p>

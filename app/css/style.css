@@ -6,7 +6,7 @@
   box-sizing: border-box;
 }
 
-body {
+body, html{
   color: #3d2a41;
   background-color: #EAC57D;
   font-family: "Epilogue", sans-serif;
@@ -133,13 +133,14 @@ a:hover {
 }
 
 .works {
-  margin-top: 85px;
+  padding-top: 120px;
 }
 .works__slider-img {
   border: 15px solid #807490;
   width: 540px;
   height: 300px;
   margin-bottom: 15px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .works__wrapper-btn {
   display: flex;
@@ -153,8 +154,6 @@ a:hover {
 }
 .works__btn {
   padding: 18px 26px;
-  font-size: 17px;
-  white-space: nowrap;
   margin-bottom: -366px;
   margin-left: -100px;
 }
@@ -163,25 +162,34 @@ a:hover {
   transition: all 0.2s linear;
 }
 .works__projects-passive {
-  opacity: 0;
-  transition: all 0.2s linear;
+  display: none;
 }
 .works__btn-active {
-  opacity: 0;
-  transition: all 0.2s linear;
+  display: none;
 }
 .works__btn-down {
   padding: 18px 26px;
-  font-size: 17px;
   max-width: 150px;
   margin-left: 1027px;
-  white-space: nowrap;
-  opacity: 1;
-  transition: all 0.2s linear;
 }
 .works__down-btn {
   opacity: 0;
   transition: all 0.2s linear;
+  display: none;
+}
+
+.btn {
+  font-size: 17px;
+  white-space: nowrap;
+  background-color: #F0E3CA;
+  cursor: pointer;
+  transition: all 0.2s linear;
+  border: none;
+}
+
+.btn:hover {
+  transition: all 0.4s;
+  background-color: rgba(185, 187, 222, 0.7254901961);
 }
 
 .footer {
@@ -215,7 +223,7 @@ a:hover {
   content: url(../images/site-icons/telegram.svg);
   position: absolute;
   left: -34px;
-  top: 12px;
+  top: 14px;
 }
 .footer__instagram::after {
   content: url(../images/site-icons/instagram.svg);
@@ -226,13 +234,13 @@ a:hover {
   content: url(../images/site-icons/github.svg);
   position: absolute;
   left: -36px;
-  top: 118px;
+  top: 134px;   
 }
 .footer__email::after {
   content: url(../images/site-icons/email.svg);
   position: absolute;
-  left: -33px;
-  top: 84px;
+  left: -33px; 
+  top: 97px;
 }
 .footer__caption {
   display: flex;
