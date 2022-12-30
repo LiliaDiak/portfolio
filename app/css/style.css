@@ -6,7 +6,7 @@
   box-sizing: border-box;
 }
 
-body, html{
+body {
   color: #3d2a41;
   background-color: #EAC57D;
   font-family: "Epilogue", sans-serif;
@@ -133,7 +133,7 @@ a:hover {
 }
 
 .works {
-  padding-top: 120px;
+  margin-top: 85px;
 }
 .works__slider-img {
   border: 15px solid #807490;
@@ -159,7 +159,6 @@ a:hover {
 }
 .works__projects-active {
   display: grid;
-  transition: all 0.2s linear;
 }
 .works__projects-passive {
   display: none;
@@ -223,7 +222,7 @@ a:hover {
   content: url(../images/site-icons/telegram.svg);
   position: absolute;
   left: -34px;
-  top: 14px;
+  top: 12px;
 }
 .footer__instagram::after {
   content: url(../images/site-icons/instagram.svg);
@@ -234,13 +233,13 @@ a:hover {
   content: url(../images/site-icons/github.svg);
   position: absolute;
   left: -36px;
-  top: 134px;   
+  top: 118px;
 }
 .footer__email::after {
   content: url(../images/site-icons/email.svg);
   position: absolute;
-  left: -33px; 
-  top: 97px;
+  left: -33px;
+  top: 84px;
 }
 .footer__caption {
   display: flex;

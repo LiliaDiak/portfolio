@@ -4,38 +4,46 @@
 @import "skills";
 
 
-.skills{
+.skills {
     padding-top: 55px;
     margin-top: 50px;
-    &__title{
+
+    &__title {
         margin-bottom: 300x;
         margin-top: 80px;
     }
-    &__images{
+
+    &__images {
         display: flex;
         justify-content: center;
-        gap:80px;
+        gap: 80px;
         margin-top: 60px;
     }
-    &__image{
+
+    &__image {
         cursor: pointer;
-        &:hover path{
+
+        &:hover path {
             transition: all 0.4s;
             fill: #807490;
         }
     }
-    &__soft{
+
+    &__soft {
         margin: 50px 0 10px 30px;
     }
-    &__soft-text{
+
+    &__soft-text {
         margin-bottom: 25px;
         font-size: 20px;
         font-weight: 500;
     }
-    &__list{
+
+    &__list {
         margin-left: 20px;
     }
-    &__li{
+
+    &__li {
         line-height: 15px;
         margin-bottom: 10px;
     }
@@ -49,73 +57,77 @@
 
 
 
-.works{
+.works {
     margin-top: 85px;
-    &__slider-img{
+
+    &__slider-img {
         border: 15px solid #807490;
-        width:540px;
+        width: 540px;
         height: 300px;
         margin-bottom: 15px;
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     }
-    &__wrapper-btn{
+
+    &__wrapper-btn {
         display: flex;
         gap: 20px;
         align-items: center;
         position: relative;
     }
-    &__slider-down{
+
+    &__slider-down {
         grid-template-columns: 540px 1px;
         grid-column-gap: 20px;
 
     }
-    &__btn{
-        padding:18px 26px;
+
+    &__btn {
+        padding: 18px 26px;
         margin-bottom: -366px;
         margin-left: -100px;
     }
-    &__projects-active{
+
+    &__projects-active {
         display: grid;
-        transition: all 0.2s linear;
     }
-    &__projects-passive{
-        // opacity: 0;       
-        // transition: all 0.2s linear;
+
+    &__projects-passive {
         display: none;
     }
-    &__btn-active{
-        // opacity: 0;       
-        // transition: all 0.2s linear;
+
+    &__btn-active {
         display: none;
     }
-    &__btn-down{
-        padding:18px 26px;
+
+    &__btn-down {
+        padding: 18px 26px;
         max-width: 150px;
         margin-left: 1027px;
-        // opacity: 1;
-        // transition: all 0.2s linear;
-        
     }
-    &__down-btn{
-        opacity: 0;       
+
+    &__down-btn {
+        opacity: 0;
         transition: all 0.2s linear;
         display: none;
     }
-    
+
 }
-.btn{
+
+.btn {
     font-size: 17px;
     white-space: nowrap;
     background-color: #F0E3CA;
     cursor: pointer;
     transition: all 0.2s linear;
     border: none;
-   
+
 }
-.btn:hover{
+
+.btn:hover {
     transition: all 0.4s;
-    background-color:#b9bbdeb9;
+    background-color: #b9bbdeb9;
 }
+
 // .slider{
 //     display: flex;
 //     // justify-content: center;
@@ -165,63 +177,73 @@
 
 
 
-.footer{
+.footer {
     transition: all 0.3s;
     background-color: #BF8709;
     opacity: 0.9;
     display: flex;
     margin-top: 120px;
-    &__wrapper{
+
+    &__wrapper {
         display: flex;
         margin: 20px 0;
         gap: 250px;
     }
-    &__title{
+
+    &__title {
         margin-bottom: 25px;
     }
-    &__text{
+
+    &__text {
         max-width: 1000px;
         line-height: 25px;
     }
-    &__list{
+
+    &__list {
         list-style: none;
         position: relative;
     }
-    &__link{
+
+    &__link {
         line-height: 25px;
         margin-top: 15px;
     }
-    &__telegram::after{
+
+    &__telegram::after {
         content: url(../images/site-icons/telegram.svg);
         position: absolute;
         left: -34px;
         top: 12px;
     }
-    &__instagram::after{
+
+    &__instagram::after {
         content: url(../images/site-icons/instagram.svg);
         position: absolute;
         left: -33px;
     }
-    &__github::after{
+
+    &__github::after {
         content: url(../images/site-icons/github.svg);
         position: absolute;
         left: -36px;
         top: 118px;
     }
-    &__email::after{
+
+    &__email::after {
         content: url(../images/site-icons/email.svg);
         position: absolute;
         left: -33px;
         top: 84px;
     }
-    &__caption{
+
+    &__caption {
         display: flex;
         align-items: flex-end;
         font-family: 'Montez', cursive;
         margin-left: 100px;
         white-space: nowrap;
         font-size: 20px;
-        width:250px;
+        width: 250px;
     }
 
 }
