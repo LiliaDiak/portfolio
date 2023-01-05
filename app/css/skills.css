@@ -1,0 +1,36 @@
+.skills {
+  padding-top: 55px;
+  margin-top: 50px;
+}
+.skills__title {
+  margin-bottom: 300x;
+  margin-top: 80px;
+}
+.skills__images {
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+  margin-top: 60px;
+}
+.skills__image {
+  cursor: pointer;
+}
+.skills__image:hover path {
+  transition: all 0.4s;
+  fill: #807490;
+}
+.skills__soft {
+  margin: 50px 0 10px 30px;
+}
+.skills__soft-text {
+  margin-bottom: 25px;
+  font-size: 20px;
+  font-weight: 500;
+}
+.skills__list {
+  margin-left: 20px;
+}
+.skills__li {
+  line-height: 15px;
+  margin-bottom: 10px;
+}

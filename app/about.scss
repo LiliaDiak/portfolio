@@ -2,16 +2,19 @@
     padding-top: 150px;
     &__wrapper {
         display: flex;
-        gap: 150px;
+        justify-content: space-between;
         align-items: center;
         background-image: url(../images/back.svg);
         background-repeat: no-repeat;
         background-position: -44px;
+        max-width: 1050px;
+        margin: 0 auto;
     }
 
     &__text {
         line-height: 25px;
         max-width: 450px;
+        min-width: 350px;
     }
 
     &__image-photo {
@@ -20,4 +23,13 @@
         max-height: 630px;
 
     }
+}
+
+@media(max-width: 850px){
+.about{
+    &__wrapper{
+        background-size: cover;
+        width: 600px;
+    }
+}
 }

@@ -6,11 +6,14 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   color: #3d2a41;
   background-color: #EAC57D;
   font-family: "Epilogue", sans-serif;
-  scroll-behavior: smooth;
 }
 
 a {
@@ -79,7 +82,7 @@ a:hover {
 }
 .about__wrapper {
   display: flex;
-  gap: 150px;
+  justify-content: space-between;
   align-items: center;
   background-image: url(../images/back.svg);
   background-repeat: no-repeat;
@@ -88,6 +91,7 @@ a:hover {
 .about__text {
   line-height: 25px;
   max-width: 450px;
+  min-width: 350px;
 }
 .about__image-photo {
   border-radius: 50%;
@@ -95,6 +99,11 @@ a:hover {
   max-height: 630px;
 }
 
+@media (max-width: 850px) {
+  .about__wrapper {
+    background-size: cover;
+  }
+}
 .skills {
   padding-top: 55px;
   margin-top: 50px;
@@ -133,7 +142,8 @@ a:hover {
 }
 
 .works {
-  margin-top: 85px;
+  padding-top: 85px;
+  margin-top: 20px;
 }
 .works__slider-img {
   border: 15px solid #807490;

@@ -3,18 +3,28 @@
 }
 .about__wrapper {
   display: flex;
-  gap: 150px;
+  justify-content: space-between;
   align-items: center;
   background-image: url(../images/back.svg);
   background-repeat: no-repeat;
   background-position: -44px;
+  max-width: 1050px;
+  margin: 0 auto;
 }
 .about__text {
   line-height: 25px;
   max-width: 450px;
+  min-width: 350px;
 }
 .about__image-photo {
   border-radius: 50%;
   max-width: 490px;
   max-height: 630px;
+}
+
+@media (max-width: 850px) {
+  .about__wrapper {
+    background-size: cover;
+    width: 600px;
+  }
 }
