@@ -5,13 +5,11 @@
   margin: 0 0;
   box-sizing: border-box;
 }
-
-html {
+html{
   scroll-behavior: smooth;
 }
 
-body {
-  color: #3d2a41;
+body{  color: #3d2a41;
   background-color: #EAC57D;
   font-family: "Epilogue", sans-serif;
 }
