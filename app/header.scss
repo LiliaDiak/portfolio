@@ -1,33 +1,106 @@
 .header {
-    background-color: #BF8709;
-    padding: 4px;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 10;
-    &__wrapper {
-      display: flex;
-      justify-content: space-between;
-      margin: 5px 100px;
-      align-items: center;
+  background-color: #BF8709;
+  padding: 4px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 10;
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin: 5px 100px;
+    align-items: center;
+  }
+
+  &__name {
+    font-family: 'Montez', cursive;
+    font-size: 34px;
+    font-weight: 600;
+
+  }
+
+  &__links {
+    font-family: 'Epilogue', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+  }
+
+  &__link {
+    margin-left: 40px;
+    width: 300px;
+  }
+
+  &__btn{
+    display: none;
+  }
+  &__btn span{
+    position: absolute;
+    width: 26px;
+    height: 3px;
+    background-color: black;
+  }
+  &__btn-active .header__btn-span2{
+      display: none;
+      transition: all .7s;
     }
-  
-    &__name {
-      font-family: 'Montez', cursive;
-      font-size: 34px;
-      font-weight: 600;
-  
-    }
-  
-    &__links {
-      font-family: 'Epilogue', sans-serif;
-      font-size: 20px;
-      font-weight: 500;
-    }
-  
-    &__link {
-      margin-left: 40px;
-      width: 300px;
-    }
+    &__btn-active .header__btn-span1{
+    transform: rotate(45deg);
+    top:26px;
+    transition: all .7s;
+  }
+  &__btn-active .header__btn-span3{
+    transform: rotate(-45deg);
+    transition: all .7s;
+    top:27px;
   }
   
+  &__btn-span1{
+    top:23px;
+    transition: all .7s;
+  }
+  &__btn-span3{
+    top:35px;
+    transition: all .7s;
+  }
+}
+
+@media(max-width:900px) {
+  .header {
+    &__link {
+      margin-left: 30px;
+    }
+
+    &__wrapper {
+      margin: 5px 55px;
+    }
+
+    &__name {
+      font-size: 32px;
+    }
+  }
+}
+
+@media(max-width:767px) {
+  .header {
+    &__links{
+      display: none;
+    }
+    &__link {
+      margin-left: 10px;
+    }
+
+    &__wrapper {
+      margin: 5px 65px;
+    }
+
+    &__name {
+      font-size: 30px;
+    }
+    &__btn{
+      display: block;
+      border:none;
+    }
+
+  }
+}

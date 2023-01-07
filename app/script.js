@@ -25,7 +25,7 @@ new Vue({
     footerText: "If you liked my work and you need me, I'm ready to talk to you. Write or call at any time (Only not at 3 in the morning).",
     isActive: false,
     activeBtn: false,
-
+    headerActive:false,
   },
   methods: {
     addClass: function () {
@@ -42,6 +42,13 @@ new Vue({
       if (this.activeBtn) {
         this.activeBtn = false;
         this.isActive = false;
+      }
+    },
+    addBurger: function(){
+      if (this.headerActive) {
+        this.headerActive = false;
+      }else{
+        this.headerActive = true;
       }
     }
 

@@ -70,29 +70,82 @@
     background-color: #b9bbdeb9;
 }
 
-// .slider{
-//     display: flex;
-//     // justify-content: center;
-//     // position: relative;
-//     // margin-left: 220px;
-//     flex-direction: column;
-// }
+@media(max-width:1300px){
+    .works
+    {
+        &__container{
+            margin: 10px 100px;
+        }
+    }
+}
 
-// .slick-prev{
-//     margin-top: 30px;
-//     position: absolute;
-//     background-color: #B9BBDE;
-//     width: 83px;
-//     height: 550px;
-//     opacity: 0.76;
-//     left: 1004px;
-//     border: none;
-//     cursor: pointer;
-//     &:hover{
-//         transition: all .5s;
-//         background-color: #807490;
-//         opacity: 0.82;
-//     }
-// }
+@media(max-width:930px){
+    .works{
+        &__container{
+            margin: 10px 25px;
+        }
+        &__wrapper-btn{
+            flex-direction: column;
+        }
+        &__btn{
+            margin-left: 14px;
+        }
+        &__btn-passive{
+            margin-top: -16px;
+        }
+        &__projects-active{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px;
+        }
+        &__btn-down{
+            margin: 0 auto;
+        }
+    }
+}
+@media(max-width:570px){
+    .works{
+        &__slider-img{
+           max-width: 456px;
+            max-height: 247px;
+        }
+        &__downbtn-wrapper{
+            display: flex;
+            justify-content: center;
+        }
+        &__wrapper-btn{
+            gap:0px;
 
+        }
+        &__projects-active {
+            margin-top: 0;
+        }
+        &__btn-passive {
+            margin-top: -1px;
+        }
+      
+    }
+}
+@media(max-width:490px){
+    .works{
+        &__slider-img {
+            max-width: 376px;
+            max-height: 219px;
+        }
+    }
+}
 
+@media(max-width:400px){
+    .works{
+        &__slider-img {
+            max-width: 337px;
+            max-height: 191px;
+        }
+    }
+}
+@media(max-width:350px){
+    .slider{
+        margin-left: 33px;
+}
+}
