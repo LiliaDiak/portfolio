@@ -22,13 +22,6 @@ body {
   flex-direction: column;
 }
 
-.wrapper {
-  min-height: 100%;
-  display: flex;
-  flex-direction: column;
-  margin: 0 auto;
-}
-
 a {
   text-decoration: none;
   color: #3d2a41;

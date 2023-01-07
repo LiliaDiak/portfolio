@@ -6,21 +6,3 @@
 @import "footer";
 
 
-@media(max-width:1024px){
-    .about{
-        &__wrapper{
-            flex-direction: column;
-            background-position: -68px -172px;
-        }
-        &__info{
-            margin-left: -300px;
-        }
-    }
-}
-
-
-// .footer{
-//     background-color: aqua;
-//     margin: 0 auto;
-//     padding: 10px;
-// }
