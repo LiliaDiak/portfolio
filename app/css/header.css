@@ -114,4 +114,7 @@
   .header__wrapper {
     margin: 5px 39px 0 16px;
   }
+  .header__links-active {
+    top: 52px;
+  }
 }

@@ -5,36 +5,23 @@
   margin: 0 0;
   box-sizing: border-box;
 }
-// html{
-//   height: 100%;
-// }
 body, html {
   scroll-behavior: smooth;
   height: 100%;
   color: #3d2a41;
   background-color: #EAC57D;
   font-family: 'Epilogue', sans-serif;
-  display: flex;
-  flex-direction: column;
+}
+.wrapper {
+  min-height: 200%;
   display: flex;
   flex-direction: column;
 }
-// .wrapper {
-//   min-height: 100%;
-//   display: flex;
-//   flex-direction: column;
-//   margin: 0 auto;
-// }
 
 a {
   text-decoration: none;
   color: #3d2a41;
   cursor: pointer;
-}
-.wrapper{
-  min-width: 100%;
-  display: flex;
-  flex-direction: column;
 }
 main{
   flex: 1 1 auto;

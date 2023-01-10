@@ -143,7 +143,9 @@
 .header{
   &__wrapper{
     margin: 5px 39px 0 16px;
-    
+  }
+  &__links-active {
+    top: 52px;
   }
 }
 }
