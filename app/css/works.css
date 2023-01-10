@@ -2,11 +2,15 @@
   padding-top: 85px;
   margin-top: 20px;
 }
+.works__projects-btn {
+  margin-bottom: 15px;
+  background: transparent;
+  border: none;
+}
 .works__slider-img {
   border: 15px solid #807490;
   width: 540px;
   height: 300px;
-  margin-bottom: 15px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .works__wrapper-btn {
@@ -58,38 +62,78 @@
   background-color: rgba(185, 187, 222, 0.7254901961);
 }
 
-@media (max-width: 1300px) {
+@media (max-width: 1380px) {
+  .works__slider-down {
+    grid-template-columns: 492px 1px;
+  }
   .works__container {
     margin: 10px 100px;
+  }
+  .works__slider-img {
+    width: 492px;
+    height: 271px;
+  }
+  .works__btn-down {
+    margin-left: 936px;
+  }
+}
+@media (max-width: 1180px) {
+  .works__wrapper-btn {
+    flex-direction: column;
+    gap: 0px;
+  }
+  .works__projects-btn {
+    margin-top: 40px;
+  }
+  .works__slider-img {
+    width: 750px;
+    height: 374px;
+  }
+  .works__projects-active {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .works__downbtn-wrapper {
+    display: flex;
+  }
+  .works__down-btn {
+    margin: 0 auto;
+  }
+  .works__btn-down {
+    margin: 0 auto;
+  }
+  .works__btn {
+    margin-left: 0px;
+  }
+}
+@media (max-width: 870px) {
+  .works__projects-btn {
+    margin-top: 0;
+  }
+  .works__slider-img {
+    width: 600px;
+    height: 336px;
   }
 }
 @media (max-width: 930px) {
   .works__container {
     margin: 10px 25px;
   }
-  .works__wrapper-btn {
-    flex-direction: column;
-  }
   .works__btn {
     margin-left: 14px;
-  }
-  .works__btn-passive {
-    margin-top: -16px;
   }
   .works__projects-active {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 20px;
-  }
-  .works__btn-down {
-    margin: 0 auto;
   }
 }
-@media (max-width: 570px) {
+@media (max-width: 600px) {
   .works__slider-img {
     max-width: 456px;
     max-height: 247px;
+    border: 13px solid #807490;
   }
   .works__downbtn-wrapper {
     display: flex;
@@ -115,10 +159,14 @@
   .works__slider-img {
     max-width: 337px;
     max-height: 191px;
+    border: 10px solid #807490;
   }
 }
 @media (max-width: 350px) {
   .slider {
-    margin-left: 33px;
+    margin-left: -2px;
+  }
+  .works__slider-img {
+    max-width: 310px;
   }
 }

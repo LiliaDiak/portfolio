@@ -22,223 +22,237 @@
         <header class="header">
             <div class="header__wrapper">
                 <a class="header__name">Lilia Diakovych</a>
-                <div class="header__links">
+                <div :class="[headerActive ? 'header__links-active' : 'header__links-passive']" class="header__links">
                     <a class="header__link" href="#about">About</a>
                     <a class="header__link" href="#skills">Skills</a>
                     <a class="header__link" href="#works">Work</a>
                     <a class="header__link" href="#contucts">Contucts</a>
                 </div>
-                <button @click="addBurger()" :class="[headerActive ? 'header__btn-active' : 'header__btn-passive']" class="header__btn" ><span class="header__btn-span1"></span>
-                        <span class="header__btn-span2"></span>
-                        <span class="header__btn-span3"></span></button>
+                <button @click="addBurger()" :class="[headerActive ? 'header__btn-active' : 'header__btn-passive']"
+                    class="header__btn"><span class="header__btn-span1"></span>
+                    <span class="header__btn-span2"></span>
+                    <span class="header__btn-span3"></span></button>
             </div>
         </header>
- 
-<main>
-        <section class="about" id="about">
-            <div class="container">
-                <div class="about__wrapper">
-                    <div class="about__info">
-                        <h2 class="about__title title">About me</h2>
-                        <p v-text="about" class="about__text">.</p>
-                    </div>
-                    <div class="about__photo">
-                        <div class="about__image">
-                            <img class="about__image-photo" src="app/images/me.jpg" alt="photo">
+
+        <main>
+             <section class="about" id="about">
+                <div class="container">
+                    <div class="about__wrapper">
+                        <div class="about__info">
+                            <h2 class="about__title title">About me</h2>
+                            <p v-text="about" class="about__text">.</p>
+                        </div>
+                        <div class="about__photo">
+                            <div class="about__image">
+                                <img class="about__image-photo" src="app/images/me.jpg" alt="photo">
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
 
-     <!-- <section class="skills" id="skills">
-            <div class="container skills__container">
-                <h2 class="skills__title title">My skills</h2>
-                <div class="skills__wrapper">
-                    <div class="skills__hard">
-                        <div class="skills__images">
-                            <svg class="skills__image" width="122" height="137" viewBox="0 0 122 137" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <g filter="url(#filter0_d_23_10)">
-                                    <path fill-rule="evenodd" clip-rule="evenodd"
-                                        d="M4.00002 0H117.283L106.899 115.092L60.9561 128.073L14.1483 115.092L4.00002 0ZM25.0832 23.2859H95.9637L89.5128 95.5824L60.6415 103.607L31.6127 95.5824L29.4887 73.5552H43.413L44.357 84.8048L60.6415 89.1316L76.4539 84.8048L78.1846 66.003H28.8593L27.522 51.9213H79.2859L80.5446 37.2889H26.2633L25.0832 23.2859Z"
-                                        fill="#F0E3CA" />
-                                </g>
-                                <defs>
-                                    <filter id="filter0_d_23_10" x="0" y="0" width="121.283" height="136.073"
-                                        filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                                        <feFlood flood-opacity="0" result="BackgroundImageFix" />
-                                        <feColorMatrix in="SourceAlpha" type="matrix"
-                                            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
-                                        <feOffset dy="4" />
-                                        <feGaussianBlur stdDeviation="2" />
-                                        <feComposite in2="hardAlpha" operator="out" />
-                                        <feColorMatrix type="matrix"
-                                            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0" />
-                                        <feBlend mode="normal" in2="BackgroundImageFix"
-                                            result="effect1_dropShadow_23_10" />
-                                        <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_23_10"
-                                            result="shape" />
-                                    </filter>
-                                </defs>
-                            </svg>
-                            <svg class="skills__image" width="122" height="137" viewBox="0 0 122 137" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <g filter="url(#filter0_d_23_7)">
-                                    <path fill-rule="evenodd" clip-rule="evenodd"
-                                        d="M4 0H117.459L107.058 115.271L61.0445 128.271L14.164 115.271L4 0ZM96.4217 19.3037H25.1948L28.898 61.9296H78.1422L76.724 80.8393L60.8082 85.1728L44.8925 80.8393L43.7894 69.4147H29.6859L31.6556 91.6337L60.8082 99.6703L89.8032 91.5549L93.5852 47.9836H41.8984L40.4802 32.777H95.161L96.4217 19.3037Z"
-                                        fill="#F0E3CA" />
-                                </g>
-                                <defs>
-                                    <filter id="filter0_d_23_7" x="0" y="0" width="121.459" height="136.271"
-                                        filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                                        <feFlood flood-opacity="0" result="BackgroundImageFix" />
-                                        <feColorMatrix in="SourceAlpha" type="matrix"
-                                            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
-                                        <feOffset dy="4" />
-                                        <feGaussianBlur stdDeviation="2" />
-                                        <feComposite in2="hardAlpha" operator="out" />
-                                        <feColorMatrix type="matrix"
-                                            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0" />
-                                        <feBlend mode="normal" in2="BackgroundImageFix"
-                                            result="effect1_dropShadow_23_7" />
-                                        <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_23_7"
-                                            result="shape" />
-                                    </filter>
-                                </defs>
-                            </svg>
-                            <svg class="skills__image" width="136" height="136" viewBox="0 0 136 136" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <g filter="url(#filter0_d_23_15)">
-                                    <path fill-rule="evenodd" clip-rule="evenodd"
-                                        d="M4 0H132V128H4V0ZM73.4589 58.6666H61.851V101.208C61.851 102.463 60.7843 107.608 55.3883 107.357C49.9922 107.106 47.5451 101.082 47.5451 101.082L37.9451 106.98C37.9451 106.98 43.2785 117.898 54.0079 117.898C64.7373 117.898 73.4589 113.882 73.4589 101.208V58.6666ZM118.384 67.5765C114.35 60.5602 107.782 57.6466 100.941 58.0392C94.1007 58.4318 84.1254 60.9977 83.8745 74.5412C83.6237 88.0846 100.126 92.8 100.126 92.8C107.004 95.6933 110.238 97.4064 110.039 101.333C109.295 106.157 106.086 107.42 101.945 107.42C97.8039 107.42 93.69 105.561 89.8981 100.141L80.3608 105.663C85.4623 113.734 91.4667 118.023 101.945 117.961C112.424 117.898 122.4 112.502 122.086 101.333C121.773 90.1647 116.376 87.2225 105.459 82.1333C98.2631 79.3103 96.1098 78.0549 95.7334 74.5412C95.3569 71.0275 97.8039 68.3922 101.318 68.3922C104.831 68.3922 107.372 70.2755 109.161 73.6L118.384 67.5765Z"
-                                        fill="#F0E3CA" />
-                                </g>
-                                <defs>
-                                    <filter id="filter0_d_23_15" x="0" y="0" width="136" height="136"
-                                        filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                                        <feFlood flood-opacity="0" result="BackgroundImageFix" />
-                                        <feColorMatrix in="SourceAlpha" type="matrix"
-                                            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
-                                        <feOffset dy="4" />
-                                        <feGaussianBlur stdDeviation="2" />
-                                        <feComposite in2="hardAlpha" operator="out" />
-                                        <feColorMatrix type="matrix"
-                                            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0" />
-                                        <feBlend mode="normal" in2="BackgroundImageFix"
-                                            result="effect1_dropShadow_23_15" />
-                                        <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_23_15"
-                                            result="shape" />
-                                    </filter>
-                                </defs>
-                            </svg>
-                            <svg class="skills__image" width="137" height="136" viewBox="0 0 137 136" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <g filter="url(#filter0_d_23_23)">
-                                    <path fill-rule="evenodd" clip-rule="evenodd"
-                                        d="M21 0C11.6112 0 4 7.61116 4 17V33.1551H3.99996V44.0195H4V64V111C4 120.389 11.6112 128 21 128H68.2498H115.5C124.888 128 132.5 120.389 132.5 111V64V17C132.5 7.61116 124.888 0 115.5 0H68.2498H21ZM4 44.0195H31.5528C33.5254 48.8193 38.247 52.199 43.758 52.199C45.5519 52.199 47.2622 51.8409 48.8212 51.1923L82.3283 84.6994C81.6855 86.2525 81.3307 87.955 81.3307 89.7405C81.3307 97.0253 87.2362 102.931 94.521 102.931C101.806 102.931 107.711 97.0253 107.711 89.7405C107.711 82.4557 101.806 76.5502 94.521 76.5502C93.0263 76.5502 91.5898 76.7988 90.2504 77.2569L57.013 44.0195H82.3782C84.3508 48.8193 89.0724 52.199 94.5834 52.199C101.868 52.199 107.774 46.2935 107.774 39.0088C107.774 31.724 101.868 25.8185 94.5834 25.8185C89.401 25.8185 84.9166 28.8073 82.7599 33.1551H55.5815C53.4248 28.8073 48.9404 25.8185 43.758 25.8185C38.5756 25.8185 34.0912 28.8073 31.9345 33.1551H4V44.0195Z"
-                                        fill="#F0E3CA" />
-                                </g>
-                                <defs>
-                                    <filter id="filter0_d_23_23" x="0" y="0" width="136.5" height="136"
-                                        filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                                        <feFlood flood-opacity="0" result="BackgroundImageFix" />
-                                        <feColorMatrix in="SourceAlpha" type="matrix"
-                                            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
-                                        <feOffset dy="4" />
-                                        <feGaussianBlur stdDeviation="2" />
-                                        <feComposite in2="hardAlpha" operator="out" />
-                                        <feColorMatrix type="matrix"
-                                            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0" />
-                                        <feBlend mode="normal" in2="BackgroundImageFix"
-                                            result="effect1_dropShadow_23_23" />
-                                        <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_23_23"
-                                            result="shape" />
-                                    </filter>
-                                </defs>
-                            </svg>
-                            <svg class="skills__image" width="136" height="136" viewBox="0 0 136 136" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <g filter="url(#filter0_d_36_6)">
-                                    <path fill-rule="evenodd" clip-rule="evenodd"
-                                        d="M132 64C132 99.3462 103.346 128 68 128C32.6538 128 4 99.3462 4 64C4 28.6538 32.6538 0 68 0C103.346 0 132 28.6538 132 64ZM58.3713 51.548C58.3713 51.548 58.0391 51.0504 57.7068 51.0504C57.3746 51.0504 57.1301 51.1583 57.0453 51.548C57.041 52.2082 57.1848 52.8726 57.5429 53.54C58.4346 55.2169 59.8641 56.5731 61.6935 57.6906C64.5153 59.497 68.1424 60.0521 72.1521 60.0147C75.0127 59.9975 78.2962 59.5991 81.7809 59.0181C86.4953 57.9063 90.7409 56.018 94.7305 53.7054C99.0739 50.9037 102.717 47.1457 105.521 42.2501C105.696 41.9101 105.871 41.597 106.047 41.2839C106.998 39.5903 107.948 37.8972 108.675 31.9569C108.675 29.847 108.294 27.6854 107.348 25.4821C106.363 22.6416 103.965 20.5562 100.873 18.8419C100.873 18.8419 94.7305 15.5211 86.4292 15.5211C78.1279 15.5211 71.6531 17.6798 71.6531 17.6798C66.2009 19.2316 60.53 21.6636 54.7197 24.6522C50.7877 26.6024 46.9894 29.0589 43.2644 31.7915C37.1866 35.9766 32.8461 41.3972 29.3196 47.3974C28.1158 49.8438 27.4068 52.3808 27.3277 55.0343C27.5909 58.7204 29.1355 62.1519 31.976 65.3275C35.1026 68.9431 38.6521 72.0338 42.6014 74.624L49.906 79.7699C50.8089 80.3864 51.6782 81.031 52.4614 81.7475C51.3677 82.3084 50.15 82.9693 48.7425 83.7551C43.9332 85.9944 39.4474 89.5885 35.1285 93.883C33.8068 95.547 32.754 97.3591 32.1399 99.5279C30.7161 104.557 31.6797 108.456 35.1285 111.149C36.3193 111.773 38.1876 112.145 40.6066 112.311C47.2037 112.276 52.0705 109.61 55.8803 105.338C59.1134 101.845 61.1657 97.198 61.5253 90.8944C61.6709 88.2606 61.1523 85.7504 59.9832 83.3616C61.924 82.7621 63.9697 82.4078 66.175 82.4263C74.1282 83.1209 81.4947 84.5232 82.7761 93.2171C82.5719 95.4161 81.5192 97.3864 79.4553 98.862C79.4553 98.862 77.7957 99.6919 78.2933 100.189C78.7909 100.687 79.7876 100.189 79.7876 100.189C82.7833 99.0547 84.722 96.8974 85.4325 93.5493C86.061 89.9452 84.4459 86.4762 81.4487 83.0907C79.0555 80.7177 76.0641 78.5417 68.6659 78.1102C66.3001 78.1217 64.127 78.2051 62.3566 78.4424C60.5156 78.7334 59.016 79.0607 57.4936 79.5627C56.1689 77.9675 54.5231 76.4323 52.561 74.9562L45.0895 69.1459C39.7739 64.9305 36.8687 60.4735 37.1204 55.6987C37.1607 48.4746 42.6877 40.4725 61.1931 30.6294C69.7547 25.9711 78.3882 23.5606 87.0922 23.3248C94.7161 23.5606 100.933 25.1714 101.701 32.1237C101.414 37.9944 97.942 42.8153 92.7371 47.0652C86.0135 52.2571 78.2775 55.3823 69.1621 55.6987C64.452 55.5836 60.7098 54.3655 58.3713 51.548ZM55.14 85.388C53.2473 86.3637 51.4183 87.488 49.5893 88.6123C49.252 88.8196 48.9148 89.0269 48.5771 89.2333C44.7486 91.9083 42.0204 94.9645 40.2758 98.3644C39.597 99.6387 39.2533 101.039 39.1138 102.515C39.1051 105.041 40.3003 105.8 42.1023 105.669C45.649 105.886 49.0014 103.719 52.2302 100.024C54.3587 97.1894 55.7782 94.021 55.8832 90.2285C56.0001 88.3098 55.7116 86.7304 55.14 85.388Z"
-                                        fill="#F0E3CA" />
-                                </g>
-                                <defs>
-                                    <filter id="filter0_d_36_6" x="0" y="0" width="136" height="136"
-                                        filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                                        <feFlood flood-opacity="0" result="BackgroundImageFix" />
-                                        <feColorMatrix in="SourceAlpha" type="matrix"
-                                            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
-                                        <feOffset dy="4" />
-                                        <feGaussianBlur stdDeviation="2" />
-                                        <feComposite in2="hardAlpha" operator="out" />
-                                        <feColorMatrix type="matrix"
-                                            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0" />
-                                        <feBlend mode="normal" in2="BackgroundImageFix"
-                                            result="effect1_dropShadow_36_6" />
-                                        <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_36_6"
-                                            result="shape" />
-                                    </filter>
-                                </defs>
-                            </svg>
+            <section class="skills" id="skills">
+                <div class="container skills__container">
+                    <h2 class="skills__title title">My skills</h2>
+                    <div class="skills__wrapper">
+                        <div class="skills__hard">
+                            <div class="skills__images">
+                                <svg class="skills__image" width="122" height="137" viewBox="0 0 122 137" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <g filter="url(#filter0_d_23_10)">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M4.00002 0H117.283L106.899 115.092L60.9561 128.073L14.1483 115.092L4.00002 0ZM25.0832 23.2859H95.9637L89.5128 95.5824L60.6415 103.607L31.6127 95.5824L29.4887 73.5552H43.413L44.357 84.8048L60.6415 89.1316L76.4539 84.8048L78.1846 66.003H28.8593L27.522 51.9213H79.2859L80.5446 37.2889H26.2633L25.0832 23.2859Z"
+                                            fill="#F0E3CA" />
+                                    </g>
+                                    <defs>
+                                        <filter id="filter0_d_23_10" x="0" y="0" width="121.283" height="136.073"
+                                            filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                                            <feColorMatrix in="SourceAlpha" type="matrix"
+                                                values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+                                            <feOffset dy="4" />
+                                            <feGaussianBlur stdDeviation="2" />
+                                            <feComposite in2="hardAlpha" operator="out" />
+                                            <feColorMatrix type="matrix"
+                                                values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0" />
+                                            <feBlend mode="normal" in2="BackgroundImageFix"
+                                                result="effect1_dropShadow_23_10" />
+                                            <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_23_10"
+                                                result="shape" />
+                                        </filter>
+                                    </defs>
+                                </svg>
+                                <svg class="skills__image" width="122" height="137" viewBox="0 0 122 137" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <g filter="url(#filter0_d_23_7)">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M4 0H117.459L107.058 115.271L61.0445 128.271L14.164 115.271L4 0ZM96.4217 19.3037H25.1948L28.898 61.9296H78.1422L76.724 80.8393L60.8082 85.1728L44.8925 80.8393L43.7894 69.4147H29.6859L31.6556 91.6337L60.8082 99.6703L89.8032 91.5549L93.5852 47.9836H41.8984L40.4802 32.777H95.161L96.4217 19.3037Z"
+                                            fill="#F0E3CA" />
+                                    </g>
+                                    <defs>
+                                        <filter id="filter0_d_23_7" x="0" y="0" width="121.459" height="136.271"
+                                            filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                                            <feColorMatrix in="SourceAlpha" type="matrix"
+                                                values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+                                            <feOffset dy="4" />
+                                            <feGaussianBlur stdDeviation="2" />
+                                            <feComposite in2="hardAlpha" operator="out" />
+                                            <feColorMatrix type="matrix"
+                                                values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0" />
+                                            <feBlend mode="normal" in2="BackgroundImageFix"
+                                                result="effect1_dropShadow_23_7" />
+                                            <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_23_7"
+                                                result="shape" />
+                                        </filter>
+                                    </defs>
+                                </svg>
+                                <svg class="skills__image" width="136" height="136" viewBox="0 0 136 136" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <g filter="url(#filter0_d_23_15)">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M4 0H132V128H4V0ZM73.4589 58.6666H61.851V101.208C61.851 102.463 60.7843 107.608 55.3883 107.357C49.9922 107.106 47.5451 101.082 47.5451 101.082L37.9451 106.98C37.9451 106.98 43.2785 117.898 54.0079 117.898C64.7373 117.898 73.4589 113.882 73.4589 101.208V58.6666ZM118.384 67.5765C114.35 60.5602 107.782 57.6466 100.941 58.0392C94.1007 58.4318 84.1254 60.9977 83.8745 74.5412C83.6237 88.0846 100.126 92.8 100.126 92.8C107.004 95.6933 110.238 97.4064 110.039 101.333C109.295 106.157 106.086 107.42 101.945 107.42C97.8039 107.42 93.69 105.561 89.8981 100.141L80.3608 105.663C85.4623 113.734 91.4667 118.023 101.945 117.961C112.424 117.898 122.4 112.502 122.086 101.333C121.773 90.1647 116.376 87.2225 105.459 82.1333C98.2631 79.3103 96.1098 78.0549 95.7334 74.5412C95.3569 71.0275 97.8039 68.3922 101.318 68.3922C104.831 68.3922 107.372 70.2755 109.161 73.6L118.384 67.5765Z"
+                                            fill="#F0E3CA" />
+                                    </g>
+                                    <defs>
+                                        <filter id="filter0_d_23_15" x="0" y="0" width="136" height="136"
+                                            filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                                            <feColorMatrix in="SourceAlpha" type="matrix"
+                                                values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+                                            <feOffset dy="4" />
+                                            <feGaussianBlur stdDeviation="2" />
+                                            <feComposite in2="hardAlpha" operator="out" />
+                                            <feColorMatrix type="matrix"
+                                                values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0" />
+                                            <feBlend mode="normal" in2="BackgroundImageFix"
+                                                result="effect1_dropShadow_23_15" />
+                                            <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_23_15"
+                                                result="shape" />
+                                        </filter>
+                                    </defs>
+                                </svg>
+                                <svg class="skills__image" width="137" height="136" viewBox="0 0 137 136" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <g filter="url(#filter0_d_23_23)">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M21 0C11.6112 0 4 7.61116 4 17V33.1551H3.99996V44.0195H4V64V111C4 120.389 11.6112 128 21 128H68.2498H115.5C124.888 128 132.5 120.389 132.5 111V64V17C132.5 7.61116 124.888 0 115.5 0H68.2498H21ZM4 44.0195H31.5528C33.5254 48.8193 38.247 52.199 43.758 52.199C45.5519 52.199 47.2622 51.8409 48.8212 51.1923L82.3283 84.6994C81.6855 86.2525 81.3307 87.955 81.3307 89.7405C81.3307 97.0253 87.2362 102.931 94.521 102.931C101.806 102.931 107.711 97.0253 107.711 89.7405C107.711 82.4557 101.806 76.5502 94.521 76.5502C93.0263 76.5502 91.5898 76.7988 90.2504 77.2569L57.013 44.0195H82.3782C84.3508 48.8193 89.0724 52.199 94.5834 52.199C101.868 52.199 107.774 46.2935 107.774 39.0088C107.774 31.724 101.868 25.8185 94.5834 25.8185C89.401 25.8185 84.9166 28.8073 82.7599 33.1551H55.5815C53.4248 28.8073 48.9404 25.8185 43.758 25.8185C38.5756 25.8185 34.0912 28.8073 31.9345 33.1551H4V44.0195Z"
+                                            fill="#F0E3CA" />
+                                    </g>
+                                    <defs>
+                                        <filter id="filter0_d_23_23" x="0" y="0" width="136.5" height="136"
+                                            filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                                            <feColorMatrix in="SourceAlpha" type="matrix"
+                                                values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+                                            <feOffset dy="4" />
+                                            <feGaussianBlur stdDeviation="2" />
+                                            <feComposite in2="hardAlpha" operator="out" />
+                                            <feColorMatrix type="matrix"
+                                                values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0" />
+                                            <feBlend mode="normal" in2="BackgroundImageFix"
+                                                result="effect1_dropShadow_23_23" />
+                                            <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_23_23"
+                                                result="shape" />
+                                        </filter>
+                                    </defs>
+                                </svg>
+                                <svg class="skills__image" width="136" height="136" viewBox="0 0 136 136" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <g filter="url(#filter0_d_36_6)">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M132 64C132 99.3462 103.346 128 68 128C32.6538 128 4 99.3462 4 64C4 28.6538 32.6538 0 68 0C103.346 0 132 28.6538 132 64ZM58.3713 51.548C58.3713 51.548 58.0391 51.0504 57.7068 51.0504C57.3746 51.0504 57.1301 51.1583 57.0453 51.548C57.041 52.2082 57.1848 52.8726 57.5429 53.54C58.4346 55.2169 59.8641 56.5731 61.6935 57.6906C64.5153 59.497 68.1424 60.0521 72.1521 60.0147C75.0127 59.9975 78.2962 59.5991 81.7809 59.0181C86.4953 57.9063 90.7409 56.018 94.7305 53.7054C99.0739 50.9037 102.717 47.1457 105.521 42.2501C105.696 41.9101 105.871 41.597 106.047 41.2839C106.998 39.5903 107.948 37.8972 108.675 31.9569C108.675 29.847 108.294 27.6854 107.348 25.4821C106.363 22.6416 103.965 20.5562 100.873 18.8419C100.873 18.8419 94.7305 15.5211 86.4292 15.5211C78.1279 15.5211 71.6531 17.6798 71.6531 17.6798C66.2009 19.2316 60.53 21.6636 54.7197 24.6522C50.7877 26.6024 46.9894 29.0589 43.2644 31.7915C37.1866 35.9766 32.8461 41.3972 29.3196 47.3974C28.1158 49.8438 27.4068 52.3808 27.3277 55.0343C27.5909 58.7204 29.1355 62.1519 31.976 65.3275C35.1026 68.9431 38.6521 72.0338 42.6014 74.624L49.906 79.7699C50.8089 80.3864 51.6782 81.031 52.4614 81.7475C51.3677 82.3084 50.15 82.9693 48.7425 83.7551C43.9332 85.9944 39.4474 89.5885 35.1285 93.883C33.8068 95.547 32.754 97.3591 32.1399 99.5279C30.7161 104.557 31.6797 108.456 35.1285 111.149C36.3193 111.773 38.1876 112.145 40.6066 112.311C47.2037 112.276 52.0705 109.61 55.8803 105.338C59.1134 101.845 61.1657 97.198 61.5253 90.8944C61.6709 88.2606 61.1523 85.7504 59.9832 83.3616C61.924 82.7621 63.9697 82.4078 66.175 82.4263C74.1282 83.1209 81.4947 84.5232 82.7761 93.2171C82.5719 95.4161 81.5192 97.3864 79.4553 98.862C79.4553 98.862 77.7957 99.6919 78.2933 100.189C78.7909 100.687 79.7876 100.189 79.7876 100.189C82.7833 99.0547 84.722 96.8974 85.4325 93.5493C86.061 89.9452 84.4459 86.4762 81.4487 83.0907C79.0555 80.7177 76.0641 78.5417 68.6659 78.1102C66.3001 78.1217 64.127 78.2051 62.3566 78.4424C60.5156 78.7334 59.016 79.0607 57.4936 79.5627C56.1689 77.9675 54.5231 76.4323 52.561 74.9562L45.0895 69.1459C39.7739 64.9305 36.8687 60.4735 37.1204 55.6987C37.1607 48.4746 42.6877 40.4725 61.1931 30.6294C69.7547 25.9711 78.3882 23.5606 87.0922 23.3248C94.7161 23.5606 100.933 25.1714 101.701 32.1237C101.414 37.9944 97.942 42.8153 92.7371 47.0652C86.0135 52.2571 78.2775 55.3823 69.1621 55.6987C64.452 55.5836 60.7098 54.3655 58.3713 51.548ZM55.14 85.388C53.2473 86.3637 51.4183 87.488 49.5893 88.6123C49.252 88.8196 48.9148 89.0269 48.5771 89.2333C44.7486 91.9083 42.0204 94.9645 40.2758 98.3644C39.597 99.6387 39.2533 101.039 39.1138 102.515C39.1051 105.041 40.3003 105.8 42.1023 105.669C45.649 105.886 49.0014 103.719 52.2302 100.024C54.3587 97.1894 55.7782 94.021 55.8832 90.2285C56.0001 88.3098 55.7116 86.7304 55.14 85.388Z"
+                                            fill="#F0E3CA" />
+                                    </g>
+                                    <defs>
+                                        <filter id="filter0_d_36_6" x="0" y="0" width="136" height="136"
+                                            filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                                            <feColorMatrix in="SourceAlpha" type="matrix"
+                                                values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+                                            <feOffset dy="4" />
+                                            <feGaussianBlur stdDeviation="2" />
+                                            <feComposite in2="hardAlpha" operator="out" />
+                                            <feColorMatrix type="matrix"
+                                                values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0" />
+                                            <feBlend mode="normal" in2="BackgroundImageFix"
+                                                result="effect1_dropShadow_36_6" />
+                                            <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_36_6"
+                                                result="shape" />
+                                        </filter>
+                                    </defs>
+                                </svg>
 
+                            </div>
                         </div>
-                    </div>
-                    <div v-html="skills" class="skills__soft"></div>
-                </div>
-            </div>
-        </section> -->
-
-    
-
-        <section class="works" id="works">
-            <div class="container works__container">
-                <div class="works__wrapper">
-                    <h2 class="works__title title">My works</h2>
-                    <div class="slider">
-                        <div class="works__wrapper-btn">
-                            <a href="#"><img class="works__slider-img" src="app/images/works/cuba.png"
-                                    alt="project"></a>
-                            <a href="#"><img class="works__slider-img" src="app/images/works/fanatic.png"
-                                    alt="project"></a>
-                            <button  @click="addClass(); btnHidden()" class="works__btn btn"
-                                :class="[activeBtn ? 'works__btn-active' : 'works__btn-passive']">show more
-                                <span class="ripple"></span>
-                            </button>
-                        </div>
-                        <div class="works__slider-down"
-                            :class="[isActive ? 'works__projects-active' : 'works__projects-passive']">
-                            <a href="#"><img class="works__slider-img" src="app/images/works/maivc.png"
-                                    alt="project"></a>
-                        </div>
-                        <div class="works__downbtn-wrapper">
-                        <button data-ripple @click="removeSlider()" class="works__btn-down btn"
-                            :class="[isActive ? '' : 'works__down-btn']">show less <span class="ripple"></span></button></div>
+                        <div v-html="skills" class="skills__soft"></div>
                     </div>
                 </div>
-            </div>
-        </section>
-    </main>
-         <!-- <footer class="footer" id="contucts">
-              <div class="container footer__container"> 
-                 <div class="footer__wrapper">
-                     <div class="footer__info">
+            </section>
+
+
+
+            <section class="works" id="works">
+                <div class="container works__container">
+                    <div class="works__wrapper">
+                        <h2 class="works__title title">My works</h2>
+                        <div class="slider">
+                            <div class="works__wrapper-btn">
+                                <a href="https://liliadiak.github.io/Cuba/"><button class="works__projects-btn"><img
+                                            class="works__slider-img" src="app/images/works/cuba.png"
+                                            alt="project"></button></a>
+
+
+
+
+                                <a href="https://liliadiak.github.io/Fanatic"><button class="works__projects-btn"><img
+                                            class="works__slider-img" src="app/images/works/fanatic.png"
+                                            alt="project"></button></a>
+
+                                <button @click="addClass(); btnHidden()" class="works__btn btn"
+                                    :class="[activeBtn ? 'works__btn-active' : 'works__btn-passive']">show more
+                                    <span class="ripple"></span>
+                                </button>
+                            </div>
+                            <div class="works__slider-down"
+                                :class="[isActive ? 'works__projects-active' : 'works__projects-passive']">
+
+                                <a href="https://liliadiak.github.io/Mavic/"><button class="works__projects-btn"><img
+                                            class="works__slider-img" src="app/images/works/maivc.png"
+                                            alt="project"></button></a>
+                            </div>
+                            <div class="works__downbtn-wrapper">
+                                <button data-ripple @click="removeSlider()" class="works__btn-down btn"
+                                    :class="[isActive ? '' : 'works__down-btn']">show less <span
+                                        class="ripple"></span></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer class="footer" id="contucts">
+            <div class="container footer__container">
+                <div class="footer__wrapper">
+                    <div class="footer__info">
                         <h2 class="footer__title">Contucts</h2>
                         <p v-text="footerText" class="footer__text"></p>
                     </div>
                     <ul class="footer__list">
-                        <li class="footer__link footer__telegram"><a href="https://t.me/lily_diakovych">telegram</a></li>
-                        <li class="footer__link footer__instagram"><a href="https://www.instagram.com/lily_diakovych/">instagram</a></li>
+                        <li class="footer__link footer__telegram"><a href="https://t.me/lily_diakovych">telegram</a>
+                        </li>
+                        <li class="footer__link footer__instagram"><a
+                                href="https://www.instagram.com/lily_diakovych/">instagram</a></li>
                         <li class="footer__link footer__email"><a href="lilidiakovychhh@gmail.com">e-mail</a></li>
                         <li class="footer__link footer__github"><a href="https://github.com/LiliaDiak">github</a></li>
                     </ul>
                     <div class="footer__caption">
                         <p>Lilia Diakovych 2022</p>
                     </div>
-                </div> 
-            </div> 
-        </footer>  -->
+                </div>
+            </div>
+        </footer>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>

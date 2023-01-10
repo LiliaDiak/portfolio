@@ -1,8 +1,6 @@
 .footer {
   transition: all 0.3s;
   opacity: 0.9;
-  display: fixed;
-  flex: 1 1 auto;
   margin-top: 120px;
   background-color: #BF8709;
 }
@@ -37,7 +35,6 @@
   content: url(../images/site-icons/telegram.svg);
   position: absolute;
   left: -34px;
-  top: 12px;
 }
 .footer__instagram::after {
   content: url(../images/site-icons/instagram.svg);
@@ -48,13 +45,12 @@
   content: url(../images/site-icons/github.svg);
   position: absolute;
   left: -36px;
-  top: 118px;
+  bottom: -8px;
 }
 .footer__email::after {
   content: url(../images/site-icons/email.svg);
   position: absolute;
   left: -33px;
-  top: 84px;
 }
 .footer__caption {
   display: flex;
@@ -64,4 +60,58 @@
   white-space: nowrap;
   font-size: 20px;
   width: 250px;
+}
+
+@media (max-width: 1150px) {
+  .footer__caption {
+    margin-left: 0px;
+  }
+  .footer__container {
+    margin-left: 91px;
+  }
+}
+@media (max-width: 930px) {
+  .footer__caption {
+    display: none;
+  }
+  .footer__wrapper {
+    max-width: 647px;
+    padding: 46px 60px 15px 13px;
+  }
+}
+@media (max-width: 660px) {
+  .footer__wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+  .footer__text {
+    line-height: 35px;
+    font-size: 20px;
+    text-align: center;
+    max-width: 500px;
+    margin-bottom: 20px;
+  }
+  .footer__list {
+    font-size: 20px;
+  }
+  .footer__link {
+    line-height: 25px;
+    margin-top: 22px;
+  }
+  .footer__caption {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    margin-bottom: -10px;
+  }
+}
+@media (max-width: 550px) {
+  .footer__container {
+    margin-left: 40px;
+  }
+}
+@media (max-width: 400px) {
+  .footer__container {
+    margin-left: 0px;
+  }
 }
