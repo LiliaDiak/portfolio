@@ -57,6 +57,11 @@
   border: none;
 }
 
+@media (max-width: 1170px) {
+  .btn {
+    margin-bottom: 50px;
+  }
+}
 .btn:hover {
   transition: all 0.4s;
   background-color: rgba(185, 187, 222, 0.7254901961);

@@ -210,7 +210,7 @@
                                             class="works__slider-img" src="app/images/works/fanatic.png"
                                             alt="project"></button></a>
 
-                                <button @click="addClass(); btnHidden()" class="works__btn btn"
+                                <button @click="addClass(); btnHidden()" class="works__btn btn btn__work"
                                     :class="[activeBtn ? 'works__btn-active' : 'works__btn-passive']">show more
                                     <span class="ripple"></span>
                                 </button>
@@ -222,7 +222,7 @@
                                             class="works__slider-img" src="app/images/works/maivc.png"
                                             alt="project"></button></a>
                             </div>
-                            <div class="works__downbtn-wrapper">
+                            <div class="works__downbtn-wrapper btn__work">
                                 <button data-ripple @click="removeSlider()" class="works__btn-down btn"
                                     :class="[isActive ? '' : 'works__down-btn']">show less <span
                                         class="ripple"></span></button>
