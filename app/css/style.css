@@ -148,7 +148,6 @@ a:hover {
     width: 100%;
     left: 0;
     bottom: 0;
-    position: fixed;
     padding-top: 50px;
     text-align: center;
     align-items: center;
@@ -158,6 +157,9 @@ a:hover {
     margin-bottom: 40px;
     font-size: 30px;
     margin-top: 20px;
+  }
+  .header__links-active {
+    position: fixed;
   }
   .header__link {
     margin-left: 10px;
@@ -674,8 +676,16 @@ a:hover {
     margin-left: 40px;
   }
 }
+@media (max-width: 450px) {
+  .footer__wrapper {
+    padding: 0 20px 0 0;
+  }
+}
 @media (max-width: 400px) {
   .footer__container {
     margin-left: 0px;
+  }
+  .footer__wrapper {
+    padding: 0 0 0 0;
   }
 }

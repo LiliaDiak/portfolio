@@ -131,12 +131,19 @@
         }
     }
 }
+@media(max-width:450px){
+.footer__wrapper{
+    padding: 0 20px 0 0;
+}
+}
 @media(max-width:400px){
     .footer{
         &__container {
             margin-left: 0px;
         }
-        
+        &__wrapper{
+            padding: 0 0 0 0;
+        }
     }
 }
 // }

@@ -107,7 +107,6 @@
       width: 100%;
       left: 0;
       bottom: 0;
-      position: fixed;
       padding-top: 50px;
       text-align: center;
       align-items: center;
@@ -118,7 +117,9 @@
         margin-top: 20px;
       }
     }
-  
+  &__links-active{
+    position: fixed;
+  }
 
   &__link {
     margin-left: 10px;

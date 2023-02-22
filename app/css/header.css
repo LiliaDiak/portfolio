@@ -85,7 +85,6 @@
     width: 100%;
     left: 0;
     bottom: 0;
-    position: fixed;
     padding-top: 50px;
     text-align: center;
     align-items: center;
@@ -95,6 +94,9 @@
     margin-bottom: 40px;
     font-size: 30px;
     margin-top: 20px;
+  }
+  .header__links-active {
+    position: fixed;
   }
   .header__link {
     margin-left: 10px;
